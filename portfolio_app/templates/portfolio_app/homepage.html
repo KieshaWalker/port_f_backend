@@ -1,0 +1,50 @@
+{% extends 'portfolio_app/base.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<div class="hero-section">
+    <div class="container">
+        <h1>Kiesha Walker</h1>
+        <p class="lead">{{ tagline }}</p>
+        <div class="hero-buttons">
+            <a href="{% url 'about' %}" class="btn-custom btn-primary-custom">Learn More About Me</a>
+            <a href="{% url 'projects' %}" class="btn-custom btn-outline-custom">View My Projects</a>
+        </div>
+    </div>
+</div>
+
+<section class="section">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">About Me</h5>
+                        <p class="card-text">Learn about my background, experience, and passion for development.</p>
+                        <a href="{% url 'about' %}" class="lowerbtn">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Technical Skills</h5>
+                        <p class="card-t">Explore the technologies and tools I work with.</p>
+                        <a href="{% url 'skills' %}" class="lowerbtn">View Skills</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">My Projects</h5>
+                        <p class="card-t">Check out some of the projects I've worked on.</p>
+                        <a href="{% url 'projects' %}" class="lowerbtn">See Projects</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

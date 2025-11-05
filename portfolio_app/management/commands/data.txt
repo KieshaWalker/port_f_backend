@@ -1,0 +1,48 @@
+(backend) k@Mac backend % cd /Users/k/coding/selfCoder/portfolio/backend
+source /Users/k/.local/share/virtualenvs/backend-5Hrfe5ot/bin/activate
+python manage.py dbshell
+SQLite version 3.51.0 2025-06-12 13:14:41
+Enter ".help" for usage hints.
+sqlite> .tables
+auth_group                  django_admin_log          
+auth_group_permissions      django_content_type       
+auth_permission             django_migrations         
+auth_user                   django_session            
+auth_user_groups            portfolio_app_profile     
+auth_user_user_permissions  portfolio_app_project     
+sqlite> .schema portfolio_app_profile
+CREATE TABLE IF NOT EXISTS "portfolio_app_profile" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(100) NOT NULL, "bio" text NOT NULL, "profile_image" varchar(100) NULL, "email" varchar(254) NOT NULL);
+sqlite> SELECT * FROM portfolio_app_profile;
+1|kiesha walker|Hi, I’m Kiesha Walker — a Full‑Stack Software Engineer who thrives at the intersection of technology, psychology, and operations. With 5+ years of experience, I specialize in building scalable, human‑centric systems that don’t just work — they adapt to real user behavior.
+
+
+Systems Thinker: From designing probabilistic trading algorithms during COVID to automating booking platforms for Walker K LLC, I’ve consistently turned complexity into clarity — and efficiency into measurable results.
+
+Operational Leader: At French Truck Coffee, I led 60+ employees across four locations, streamlining workflows and scaling operations with the same rigor I now bring to code.
+
+ A graduate of General Assembly’s immersive Software Engineering program (480+ hours), I’ve built full‑stack applications with React, Node.js, Python, Docker, and CI/CD pipelines, always optimizing for maintainability and seamless deployment.
+
+What sets me apart is my ability to bridge disciplines:
+
+A background in psychology and Spanish fuels my human‑centered design and multilingual collaboration (fluent in ASL and Spanish).
+
+My leadership experience ensures I can scale not just systems, but teams.
+
+My curiosity drives rapid self‑learning, whether it’s mastering a new framework or architecting a workflow from scratch.|images/profiles/Screenshot_2025-10-31_at_1.09.11PM.png|llcwalkerk@gmail.com
+2|Your Name|I am a passionate developer with experience in various technologies. I love creating innovative solutions and learning new things.||your.email@example.com
+sqlite> SELECT * FROM portfolio_app_project;
+1|My-App|Constructed a decoupled SPA and API architecture enabling independent scaling and feature auditing.
+Implemented Habitica API integration with dynamic environment variables, ensuring modular configuration.
+Treated deployment as a performance experiment: measured CDN edge caching, security hardening, and latency tradeoffs.
+Practiced full systems thinking — from client-side UX to backend concurrency design.|Cython, Python, Node.js, Express, C, Mongoose, React, TypeScript, Shell, PowerShell|https://github.com/KieshaWalker/myapp|||2025-10-29 21:46:56.458172
+2|Bull & Paper|Trading Journal App
+- Designed and deployed a full-stack trading journal inspired by professional trading logic, integrating live market data with behavioral tracking to improve decision-making.
+- Engineered the backend (Node.js, Express.js, PostgreSQL) to replicate - Frontend UX (React, TypeScript) with cognitive processes.
+- Deployed production-ready architecture (Netlify + Heroku) with end-to-end CI/CD (Git, Docker, ESLint), achieving 99.9% uptime and handling 500+ daily active users.
+- Technologies: React, Node.js, Express.js, PostgreSQL, TypeScript, Do|React, Node.js, Express, MongoDB, Stripe API|https://github.com/corigraves97/b-and-p-front-end|https://bull-and-paper.netlify.app/|images/projects/Screenshot_2025-10-31_at_11.59.48AM.png|2025-10-29 21:46:56.458992
+3|Habit Management App|Habit Tracker App: Developed a full-stack application for habit management, allowing users to sign up, log in, and create personalized habits with frequency and duration goals. Users can mark completions, view historical logs, and track progress via interactive progress bars.|React, Node.js, Express.js, PostgreSQL, Heroku|https://github.com/KieshaWalker/habit-tracker-app.git|https://dailyhabitracker-e2247b7e6739.herokuapp.com/|images/projects/Screenshot_2025-10-31_at_12.09.25PM.png|2025-10-29 21:46:56.459708
+4|detoX|Developed detoX, a curated social media platform for authentic content creators valuing quality over quantity, focusing on genuine connections and community-driven growth. Engineered an invitation-only access system with a rigorous application process, including questionnaires and admin curation, to ensure community alignment and positive interactions. Implemented key features: high-quality content sharing (video/photo), meaningful interactions (likes, comments, DMs), community safety tools (reporting, blocking), and growth analytics for user insights.|Python, JavaScript, HTML, CSS|https://github.com/KieshaWalker/detoX|https://detox-d9783821c32a.herokuapp.com/|images/projects/Screenshot_2025-10-31_at_12.35.18PM.png|2025-10-31 17:39:13.874135
+5|Portfolio Website|A modern, responsive portfolio website built with Django and Bootstrap. Features clean design, smooth animations, and mobile-first approach.|Django, Python, HTML, CSS, Bootstrap, JavaScript|https://github.com/username/portfolio|https://yourportfolio.com||2025-11-04 21:18:47.716823
+6|E-commerce Platform|Full-stack e-commerce solution with user authentication, payment processing, and admin dashboard. Built with modern web technologies.|React, Node.js, Express, MongoDB, Stripe API|https://github.com/username/ecommerce|https://yourshop.com||2025-11-04 21:18:47.717691
+7|Task Management App|A collaborative task management application with real-time updates, team collaboration features, and progress tracking.|Vue.js, Firebase, Tailwind CSS, WebSocket|https://github.com/username/taskmanager|https://taskmanager.com||2025-11-04 21:18:47.718570
+sqlite> 

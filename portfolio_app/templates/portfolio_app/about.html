@@ -1,0 +1,28 @@
+{% extends 'portfolio_app/base.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="section-title">
+                    <h2>About Me</h2>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        {% if profile.profile_image %}
+                        <div class="text-center mb-4">
+                            <img src="{{ profile.profile_image.url }}" alt="{{ profile.name }}" class="rounded-circle"
+                                style="width: 150px; height: 150px; object-fit: cover; border: 3px solid var(--accent-color);">
+                        </div>
+                        {% endif %}
+                        <p class="lead">{{ profile.bio }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
